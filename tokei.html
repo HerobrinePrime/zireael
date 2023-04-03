@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>复烘复焖</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/tokei.css">
+    <script src="./js/jquery.mim.js"></script>
+</head>
+
+<body style="opacity: 0;">
+
+    <div id="backs" class="back"><img src="res/back.webp"></div>
+    <div class="backmenu">
+        <div onclick="mainhtml()"><img src="res/YY_zhuye_3.webp"><span>主页</span></div>
+        <div onclick="reTurn()"><img src="res/re.webp"><span>返回</span></div>
+    </div>
+    <script>
+        function reTurn() {
+            history.go(-1);
+        }
+        function mainhtml() {
+            location.href = "index.html"
+        }
+    </script>
+    <script src="./js/back.js"></script>
+
+    
+    <div class="main">
+        <div style="height: 8vh;"></div>
+
+        <div class="title">等待九次“复烘复焖”过程...</div>
+
+        <div class="clock clockrot">
+            <div id="mawaru" class="" style="z-index: 3;height: 16vh;"><img id="hari" src="./res/tokei/hari.webp"></div>
+            <img id="clockouter" src="./res/tokei/clockouter.webp">
+            <img src="./res/tokei/thesix.webp" id="thesix" style="height: 0;">
+        </div>
+
+        <div class="message">
+            <!-- <img src="./res/tokei/message.webp" alt=""> -->
+            九闷九烘工艺制作出的黄茶，干茶显黄，白毫显露，俗称白 心黄叶。具体表现为：色泽黄绿显毫，汤色杏黄明亮，滋味 甘醇爽口，玉米香高持久，叶底嫩黄明亮匀齐。常饮黄茶， 有保护脾胃、提高食欲、提神益思、延缓衰老的功效。
+            <div class="next"><img src="./res/next.webp" style="display: block;
+                height: 100%;" alt=""></div>
+        </div>
+
+        <div class="repeat" style="display: none;">复烘复焖</div>
+
+        <div class="cover"></div>
+    </div>
+</body>
+<script src="./js/tokei.js"></script>
+
+</html>

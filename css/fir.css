@@ -1,0 +1,504 @@
+@font-face {
+    font-family: "HYShangWeiShouShuW";
+    src: url(../font/HYShangWeiShouShuW.ttf);
+}
+
+@font-face {
+    font-family: "Alibaba";
+    src: url(../font/Alibaba-PuHuiTi-Regular.ttf);
+}
+
+.jiujiu {
+    position: absolute;
+    background-color: transparent;
+    z-index: 210;
+}
+
+.jojo {
+    opacity: 0;
+    animation: jojo 2s forwards;
+}
+
+@keyframes jojo {
+    0% {
+        top: 100vh;
+    }
+
+    20% {
+        top: 30vh;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0vh;
+    }
+}
+
+.cloud {
+    position: absolute;
+    left: 60vh;
+    top: 0%;
+    transition: 2s;
+    background-color: transparent !important;
+}
+
+.cloud11 {
+    z-index: 209;
+}
+
+.cloud22 {
+    z-index: 211;
+}
+
+.cloud1 {
+    animation: cloudMove1 10s linear 7s infinite;
+}
+
+.cloud2 {
+    animation: cloudMove2 10s linear 2s infinite;
+}
+
+@keyframes cloudMove1 {
+    0% {
+        left: 15vh;
+    }
+
+    100% {
+        left: -60vh;
+    }
+}
+
+@keyframes cloudMove2 {
+    0% {
+        left: 45vh;
+    }
+
+    100% {
+        left: -35vh;
+    }
+}
+
+.shuangyun {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0vh;
+    left: 100vw;
+    z-index: 211;
+}
+
+.shuangyundo {
+    animation: shuangyundo 15s linear 2s infinite forwards;
+}
+
+@keyframes shuangyundo {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -100vw;
+    }
+}
+
+.guo {
+    font-size: 4vh;
+    line-height: 5vh;
+    text-align: center;
+    height: 5vh;
+    width: 15vh;
+    /* background-color: cyan; */
+    /* float: right; */
+    position: absolute;
+    right: 2vw;
+    opacity: 0;
+    /* bottom: 2vh; */
+    bottom: -6vh;
+    color: white;
+    /* font-family: "HYShangWeiShouShuW"; */
+    display: block;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+
+.click2 {
+    display: block;
+    animation: guo1 1s ease forwards;
+}
+
+@keyframes guo1 {
+    from {
+        opacity: 0;
+        bottom: -6vh;
+    }
+
+    to {
+        opacity: 1;
+        bottom: 5vh;
+    }
+}
+
+.click3 {
+    animation: guo3 1s ease forwards;
+}
+
+@keyframes guo3 {
+    from {
+        opacity: 0;
+        bottom: -6vh;
+    }
+
+    to {
+        opacity: 1;
+        bottom: 15vh;
+    }
+}
+
+.tubiao {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 61%;
+    left: 63%;
+    z-index: 997;
+    opacity: 0;
+    transform: scale(0, 0);
+    animation: appear 5s 1.5s forwards;
+}
+
+@keyframes appear {
+    from {
+        /* opacity: 0; */
+        transform: scale(0, 0);
+    }
+
+    to {
+        /* opacity: 1; */
+        transform: scale(1, 1);
+    }
+}
+
+/* .disappear {
+    animation: disappear 2s forwards;
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0, 0);
+    }
+} */
+
+.sunMoved {
+    height: 206px;
+    width: 141px;
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    right: 9%;
+    animation: sunmove 2s 3s forwards;
+}
+
+@keyframes sunmove {
+    from {
+        top: 50%;
+        opacity: 0;
+    }
+
+    to {
+        top: 13%;
+        opacity: 1;
+    }
+}
+
+.TheSun {
+    height: 98px;
+    position: relative;
+    top: -13px;
+    left: 45px;
+    animation: sunSpin 40s linear infinite;
+    z-index: 103;
+}
+
+.lighton {
+    height: 200px;
+    position: relative;
+    top: -72px;
+    left: -6px;
+    opacity: 0;
+    animation: lighton 1s linear 5s forwards;
+}
+
+@keyframes lighton {
+    form {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes sunSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 
+.firbgs {
+    background-image: url("res/fir/背景101.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    opacity: 0;
+} */
+
+.firstIn {
+    position: absolute;
+    display: flex;
+    height: 300vh;
+    width: 300vw;
+    flex-wrap: wrap;
+    top: -100vh;
+    left: -100vw;
+}
+
+.firbgsC {
+    /* background-image: url("res/fir/背景101.webp"); */
+    position: absolute;
+    /* top: 100vh!important; */
+    /* left: 100vw!important; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    animation: move 1.5s cubic-bezier(0.000, 0.655, 0.000, 1.510) forwards;
+}
+
+@keyframes move {
+    0% {
+        top: 200vh !important;
+        left: 100vw !important;
+    }
+
+
+
+    100% {
+        top: 100vh;
+    }
+}
+
+.click1 {
+    position: absolute;
+    /* background-color: black; */
+    /* border-radius: 50%; */
+    height: 0px;
+    opacity: 0.5;
+    width: 0px;
+    top: 40%;
+    left: 8%;
+    z-index: 960;
+    transform-origin: 20% 40%;
+    transition: .5s;
+}
+
+.enable {
+    height: 20vw;
+    width: 20vw;
+    transition: .5s;
+    animation: caicha 1s infinite linear;
+}
+
+@keyframes caicha {
+    0% {
+        transform: rotate(-20deg);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-20deg);
+        opacity: 0.5;
+    }
+}
+
+/* .textDiv {
+    height: 0vh;
+    width: 0vw;
+    opacity: 0;
+    background-color: royalblue;
+    border: 5px solid sienna;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+} */
+
+.textDivZoomIn {
+    animation: textDivZoomIn 2s forwards;
+}
+
+@keyframes textDivZoomIn {
+    0% {
+        height: 0vh;
+        width: 0vw;
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        height: 90vh;
+        width: 80vw;
+        opacity: 1;
+    }
+}
+
+.left {
+    animation: run1 3s forwards;
+}
+
+@keyframes run1 {
+    0% {
+        left: -100vw;
+    }
+
+    100% {
+        left: 100vw;
+    }
+}
+
+.right {
+    animation: run2 3s forwards;
+}
+
+@keyframes run2 {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -100vw;
+    }
+}
+
+.after {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0vh;
+    left: 0vw;
+    z-index: 100;
+}
+
+.shanhe1 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    top: 0vh;
+    left: 0vw;
+    opacity: 0;
+    z-index: 101;
+}
+
+.shanhe2 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    top: 0vh;
+    left: 0vw;
+    opacity: 1;
+    z-index: 101;
+}
+
+.yuncai {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0vh;
+    left: 0vw;
+    opacity: 0;
+    z-index: 102;
+}
+
+.yuncai2 {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0vh;
+    left: 0vw;
+    z-index: 102;
+    animation: Appear 3s forwards;
+}
+
+@keyframes Appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.dianxiaodian1 {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 100vh;
+    left: 0vw;
+    opacity: 0;
+    z-index: 103;
+}
+
+.dianxiaodian2 {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 100vh;
+    left: 0vw;
+    opacity: 0;
+    z-index: 103;
+    animation: shanglai 2.1s forwards;
+}
+
+@keyframes shanglai {
+    0% {
+        top: 100vh;
+    }
+
+    20% {
+        top: 30vh;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0vh;
+    }
+}

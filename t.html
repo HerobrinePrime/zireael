@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>手</title>
+	<meta charset="utf-8" />
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />-->
+
+	<script type="text/javascript" src="js/jquery.mim.js"></script>
+	<script type="text/javascript">
+
+		$(function () {
+			var leaves = $(".leaf")
+			var a = 0;
+			var is_collect = false
+
+			for (var i = 0; i < leaves.length; i++) {
+				$(leaves[i]).bind("touchstart", function (e) {
+					sign_disappear();
+				})
+				$(leaves[i]).bind("touchmove", function (e) {
+					$(this).css("left", e.touches[0].clientX)
+					$(this).css("top", e.touches[0].clientY)
+					if (e.touches[0].clientX > 170 && e.touches[0].clientX < 320) {
+						if (e.touches[0].clientY > 1300 && e.touches[0].clientY < 1500) {
+							is_collect = true;
+						}
+					}
+				})
+				$(leaves[i]).bind("touchend", function (e) {
+					if (is_collect == true) {
+						$(this).css("display", "none")
+						collect();
+					}
+				})
+			}
+			function sign_disappear() {
+				$("#sign").css("display", "none");
+			}
+			function collect() {
+				a++;
+				if (a == 1) {
+					$("#leaves").css("width", "100px")
+					$("#leaves").css("height", "70px")
+					$("#leaves").css("top", "10%")
+					$("#leaves").css("left", "35%")
+				}
+				if (a == 2) {
+					$("#leaves").css("width", "150px")
+					$("#leaves").css("height", "105px")
+					$("#leaves").css("top", "6%")
+					$("#leaves").css("left", "25%")
+				}
+				if (a == 3) {
+					$("#leaves").css("width", "200px")
+					$("#leaves").css("height", "140px")
+					$("#leaves").css("top", "3%")
+					$("#leaves").css("left", "15%")
+				}
+				if (a == 4) {
+					$("#leaves").css("width", "250px")
+					$("#leaves").css("height", "175px")
+					$("#leaves").css("top", "0%")
+					$("#leaves").css("left", "5%")
+					$("#line_2").css("display", "block")
+					$('#click2').addClass('click3')
+				}
+			}
+			$("#basket").click(function () {
+				if (a >= 4) {
+					window.location.assign("zir.html");
+				}
+			});
+
+
+		});
+	</script>
+	<style type="text/css">
+		* {
+
+			touch-action: none;
+
+			touch-action: pan-y;
+
+		}
+
+		body,
+		html {
+			margin: 0px;
+			width: 100%;
+			height: 100%;
+		}
+
+		@font-face {
+			font-family: 'FZFengYKSJF';
+			src: url('../font/FZFengYKSJF_Cu.TTF');
+		}
+
+		.bkk {
+			background-image: url("res/picture/background.webp");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			height: 100%;
+			width: 100%;
+			z-index: 0;
+			top: 0;
+		}
+
+		.harvest {
+			position: absolute;
+			top: 0%;
+			height: 100%;
+			width: 100%;
+
+		}
+
+		.person {
+			position: absolute;
+			top: 0%;
+			left: 20%;
+			width: 80%;
+			height: 90%;
+		}
+
+		#hand {
+			position: absolute;
+			right: 0%;
+		}
+
+		#hat {
+			position: absolute;
+			top: 10%;
+			right: 0%;
+		}
+
+		#leaves {
+			position: absolute;
+			top: 0%;
+			left: 10%;
+			width: 0px;
+			height: 0px;
+			transition: 0.5s;
+		}
+
+		#basket {
+			position: absolute;
+			bottom: 15vh;
+			/* top: 70%; */
+			left: 10%;
+			z-index: 5;
+		}
+
+		.high_light {
+			position: absolute;
+			top: 18%;
+			left: 15%;
+
+			height: 200px;
+			width: 200px;
+			border-radius: 100px;
+			filter: brightness(300%);
+			z-index: 4;
+			background-color: white;
+		}
+
+		.leaf {
+			display: block;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			z-index: 7;
+		}
+
+		#return {
+			height: 150px;
+			width: 150px;
+			position: fixed;
+			top: -20px;
+		}
+
+		#pick {
+			position: absolute;
+			top: 15%;
+			left: 0%;
+			animation: pick_move 2s linear infinite;
+			z-index: 8;
+		}
+
+		@keyframes pick_move {
+			0% {
+				top: 15%;
+				left: 0%;
+			}
+
+			10% {
+				top: 15%;
+				left: 0%;
+			}
+
+			90% {
+				top: 62%;
+				left: 5%;
+			}
+
+			100% {
+				top: 62%;
+				left: 5%;
+			}
+		}
+
+		.line {
+			position: absolute;
+			top: 12%;
+			left: 10%;
+			font-family: 'FZFengYKSJF';
+			width: 300px;
+			height: 100px;
+			font-size: 1.8vh;
+			color: white;
+		}
+
+		.line_2 {
+			display: none;
+			position: absolute;
+			bottom: 0%;
+			left: 50%;
+			padding: 20px;
+			background-color: #0e7648;
+			border-radius: 20px;
+			width: 90%;
+			height: 13vh;
+			font-size: 40px;
+			color: white;
+			transform: translateX(-50%);
+			z-index: 8;
+		}
+	</style>
+</head>
+
+<body style="overflow:hidden;display: none;">
+	<div style="position:absolute;" class="bkk"></div>
+	<!-- <a href="index.html" target="_self" title="主页" style="position: absolute;z-index: 9999;">
+		<img src="res/picture/return.webp" />
+	</a> -->
+	<div class="harvest" id="sign" style="z-index: 5;">
+		<div class="harvest" style=" background-color:black; opacity: 0.2;z-index: 3;">
+			<div class="high_light"></div>
+		</div>
+		<p class="line">请将屏幕中的茶叶拖入篮子中来收集茶叶</p>
+		<img id="pick" src="res/picture/icon.webp" />
+
+	</div>
+
+	<div class="harvest" style="z-index: 6;">
+		<img class="leaf" style="
+    			top: 60%;
+            	left: 35%;
+            " src="res/picture/leaf-1.webp" />
+		<img class="leaf" style="
+    			top: 30%;
+            	left: 25%;
+            " src="res/picture/leaf-2.webp" />
+		<img class="leaf" style="
+    			top: 30%;
+            	left: 50%;
+            " src="res/picture/leaf-3.webp" />
+		<img class="leaf" style="
+    			top: 23%;
+            	left: 25%;
+            " src="res/picture/leaf-4.webp" />
+
+		<div id="basket">
+			<img src="res/picture/basket.webp" />
+			<img id="leaves" src="res/picture/leaves.webp" />
+		</div>
+		<div class="line_2" id="line_2">
+			手工采茶是最传统的茶树采摘方法，可分为掐采、提手采和双手采，而提手采是茶叶标准的采摘手法。手工采茶要求提手采，分朵采，这种采摘方法，能保持芽叶完整、新鲜、匀净，不夹带鳞片、鱼叶、茶果和老枝叶，不宜捋采、抓采或掐采。
+		</div>
+
+	</div>
+
+	<div class="harvest">
+
+		<div class="person">
+			<img id="hand" src="res/picture/hand.webp" />
+			<img id="hat" src="res/picture/hat.webp" />
+		</div>
+
+
+	</div>
+
+	<link rel="stylesheet" href="./css//main.css">
+	<div id="backs" class="back"><img src="res/back.webp"></div>
+	<div class="backmenu">
+		<div onclick="mainhtml()"><img src="res/YY_zhuye_3.webp"><span>主页</span></div>
+		<div onclick="reTurn()"><img src="res/re.webp"><span>返回</span></div>
+	</div>
+	<script src="./js/back.js"></script>
+	<script>
+		// $(".main").hide();
+		function reTurn() {
+			history.go(-1);
+			// history.back();
+			// console.log(history);
+		}
+
+		function mainhtml() {
+			location.href = "index.html"
+		}
+	</script>
+
+	<link rel="stylesheet" href="./css/fir.css">
+	<a href="./zir.html" id="click2" class="guo">
+		<img src="./res/next.webp" style="display: block;
+            height: 100%;" alt="">
+	</a>
+</body>
+<script>
+	$(document).ready(function () { 
+		$('body').fadeIn(1000)
+	})
+</script>
+
+</html>

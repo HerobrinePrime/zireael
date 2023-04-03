@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>黄汤茶</title>
+	<script type="text/javascript" src="js/jquery.mim.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			var leaves = $(".leaf")
+			var a = 0;
+			var is_collect = false
+			var packing = $("#packing_front")
+			for (var i = 0; i < leaves.length; i++) {
+				$(leaves[i]).bind("touchstart", function (e) {
+				});
+				$(leaves[i]).bind("touchmove", function (e) {
+					$(this).css("left", e.touches[0].clientX)
+					$(this).css("top", e.touches[0].clientY)
+					if (e.touches[0].clientX > 250 && e.touches[0].clientX < 720) {
+						if (e.touches[0].clientY > 900 && e.touches[0].clientY < 1600) {
+							is_collect = true;
+						}
+					}
+				})
+				$(leaves[i]).bind("touchend", function (e) {
+					if (is_collect == true) {
+						$(this).css("display", "none")
+						collect();
+					}
+				})
+			}
+
+			function collect() {
+
+				a += 0.2;
+				$("#packing_front").css("opacity", a)
+				if (a == 0.2) {
+					document.getElementById("line_1").style.opacity = 0;
+					$("#line_1").css("opacity", "0");
+				}
+				if (a == 1) {
+					document.getElementById("line_2").style.opacity = 1;
+					$("#line_2").css("opacity", "opacity");
+					$("#packing_front").click(function () {
+						location.href = "./QRCode.html"
+					});
+				}
+			}
+
+		});
+
+	</script>
+	<style type="text/css">
+		@font-face {
+			font-family: 'FZFengYKSJF';
+			src: url('../font/FZFengYKSJF_Cu.TTF');
+		}
+
+		body,
+		html {
+			margin: 0px;
+			width: 100%;
+			height: 100%;
+		}
+
+		* {
+
+			touch-action: none;
+
+			touch-action: pan-y;
+
+		}
+
+		.kkk {
+			background-image: url(res/picture-2/bg.webp);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			height: 100vh;
+			width: 100%;
+			position: absolute;
+			top: 0;
+		}
+
+		.screen {
+			position: absolute;
+			top: 0%;
+			height: 100vh;
+			width: 100%;
+			/*display: flex;
+            	flex-wrap:wrap ;*/
+		}
+
+		#leaf_1 {
+			position: absolute;
+			top: 10%;
+			left: 15%;
+			touch-action: none;
+		}
+
+		#leaf_2 {
+			position: absolute;
+			top: 20%;
+			left: 15%;
+			touch-action: none;
+		}
+
+		#leaf_3 {
+			position: absolute;
+			top: 12%;
+			touch-action: none;
+			left: 45%;
+		}
+
+		#leaf_4 {
+			position: absolute;
+			top: 10%;
+			touch-action: none;
+			left: 65%;
+		}
+
+		#leaf_5 {
+			position: absolute;
+			top: 22%;
+			touch-action: none;
+			left: 75%;
+		}
+
+		#return {
+			height: 150px;
+			width: 150px;
+			position: fixed;
+			top: -20px;
+		}
+
+		.packing {
+			position: absolute;
+			margin: 0 auto;
+			top: 10%;
+			left: 0;
+			right: 0;
+
+		}
+
+		#packing_front {
+			opacity: 0;
+			z-index: 2;
+			transition: opacity 0.5s;
+		}
+
+		.leaf {
+			z-index: 6;
+			display: block;
+			position: absolute;
+			transform: translate(-50%, -50%);
+		}
+
+		.line {
+			transform: translateX(-50%);
+			left: 50%;
+			width: 900px;
+			position: absolute;
+			color: white;
+			font-size: 65px;
+			font-family: 'FZFengYKSJF';
+			text-align: center;
+			transition: 0.5s;
+		}
+
+		.goods_continer {
+			position: absolute;
+			top: 35%;
+			margin: 0px auto;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+
+		}
+
+		.packiing_container {
+			display: block;
+			height: 800px;
+			width: 700px;
+		}
+
+		.line_container {
+			height: 80px;
+			width: 900px;
+		}
+	</style>
+</head>
+
+<body style="overflow:hidden;display: none;">
+	<div class="kkk"></div>
+	<div class="screen">
+		<img class="leaf" id="leaf_1" src="res/picture-2/leaf-1.webp" />
+		<img class="leaf" id="leaf_2" src="res/picture-2/leaf-2.webp" />
+		<img class="leaf" id="leaf_3" src="res/picture-2/leaf-3.webp" />
+		<img class="leaf" id="leaf_4" src="res/picture-2/leaf-4.webp" />
+		<img class="leaf" id="leaf_5" src="res/picture-2/leaf-5.webp" />
+	</div>
+	<div class="goods_continer">
+		<div class="line_container">
+			<div class="line" id="line_1" style="display: block;">将茶叶拖入袋中以完成制作</div>
+			<div class="line" id="line_2" style="opacity: 0;">恭喜你完成了黄汤茶的制作</div>
+		</div>
+
+		<div class="packiing_container">
+			<img class="packing" src="res/picture-2/packing-1.webp" />
+			<img class="packing" id="packing_front" src="res/picture-2/packing-2.webp" />
+		</div>
+	</div>
+
+</body>
+
+<script>
+	$(document).ready(function () {
+		$('body').fadeIn(1000)
+	})
+</script>
+
+</html>

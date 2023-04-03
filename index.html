@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>黄汤茶文化</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="js/jquery.mim.js"></script>
+    <style type="text/css">
+        @import url("css/main.css");
+    </style>
+    <style type="text/css">
+        @import url("./css/fir.css");
+    </style>
+    <style>
+        @import url("css/swiper-bundle.min.css");
+    </style>
+    <style>
+        @import url("css/swiper.css");
+    </style>
+    <style>
+        .se {
+            opacity: 0.6;
+        }
+    </style>
+
+</head>
+
+<body style="overflow:hidden;display:none;">
+
+    <div class="fir" style="background-color: white;display:block;">
+        <!-- <div class='fir' id="changedBgDIv" style="background-image: url('res/huangtangcha/zong.webp');display: none;z-index: 100;">
+        </div> -->
+        <img class="shanhe1" id="shanhe" src="res/huangtangcha/yunguobeijing.webp">
+        <img class="dianxiaodian1" id="wenzi" src="res/huangtangcha/dianxiaodianzhihoudezi.webp">
+        <img class="yuncai" id="yuncai" src="res/huangtangcha/yuncai.webp">
+        <img class="shuangyun" id="shuangyun" src="res/huangtangcha/shuangyun.webp">
+        <div class="firstIn">
+
+            <div class="firbgs"
+                style="top:200vh;left:100vw;z-index:111;background-image: url('res/huangtangcha/dibushitouxiaocao.webp');">
+            </div>
+            <div class="firbgs"
+                style="top:200vh;left:100vw;z-index:110;background-image: url('res/huangtangcha/caocong3.webp');">
+            </div>
+            <div class="firbgs"
+                style="top:200vh;left:100vw;z-index:109;background-image: url('res/huangtangcha/caocong2.webp');">
+            </div>
+            <div class="firbgs"
+                style="top:200vh;left:100vw;z-index:108;background-image: url('res/huangtangcha/caocong1.webp');">
+            </div>
+            <div class="firbgs"
+                style="top:200vh;left:100vw;z-index:107;background-image: url('res/huangtangcha/醉翁亭107.webp');">
+            </div>
+            <div class="firbgs"
+                style="top:200vh;left:100vw;z-index:107;background-image: url('res/huangtangcha/fangzi.webp');">
+            </div>
+            <div class="firbgs"
+                style="top:200vh;left:100vw;z-index:106;background-image: url('res/huangtangcha/he.webp');">
+            </div>
+            <div class="firbgs"
+                style="top:200vh;left:100vw;z-index:105;background-image: url('res/huangtangcha/shan3.webp');">
+            </div>
+            <div class="firbgs"
+                style="top:200vh;left:100vw;z-index:104;background-image: url('res/huangtangcha/shan2.webp');">
+            </div>
+            <div class="firbgs"
+                style="top:200vh;left:100vw;z-index:103;background-image: url('res/huangtangcha/shan1.webp');">
+            </div>
+            <div class="firbgs"
+                style="top:200vh;left:100vw;z-index:112;background-image: url('res/huangtangcha/jiqihexiaocao.webp');">
+            </div>
+        </div>
+
+        <img class="click1" src="res/picture/nnn.webp">
+        <img class="tuzuku" style="position: absolute;
+        height: 3vh;
+        z-index: 960;
+        top: 50%;
+        left: 5%;
+        opacity: 0;
+        transition: 1s;
+        " src="./res/picture/tuzuku.webp">
+        <a href="./t.html" id="click2" class="guo">
+            <img src="./res/next.webp" style="display: block;
+            height: 100%;" alt="">
+        </a>
+        <!-- <div class="textDiv" ><a href="./t1.html"><img class="hand" src="res/icons/icons/4.webp"></a></div> -->
+
+        <a href="./zir.html"><img id="disappear" class="tubiao" src="res/huangtangcha/tubiao.webp"></a>
+        <!-- 这里的网址还没加 -->
+
+        <div class="fir cloud cloud11" style="background-image: url('res/huangtangcha/shenseyun.webp');">
+        </div>
+        <div class="fir jiujiu" id="jiujiu"
+            style="background-image: url(res/huangtangcha/99wenzi.webp);top: 100vh;left: 3vw;"></div>
+        <div class="fir cloud cloud22" style="background-image: url('res/huangtangcha/qianseyun.webp');">
+        </div>
+
+        <div id="sunMoved">
+            <img id="TheSun" src="res/huangtangcha/ri.webp">
+            <img id="lighton" src="res/fir/mayangguang102.webp">
+        </div>
+        <div class="firbgs se" id="left"
+            style="height:100vh;width:100vw;top:0vh;left:-100vw;background-color: aquamarine;position: absolute;  z-index: 998;">
+        </div>
+        <div class="firbgs se" id="right"
+            style="height:100vh;width:100vw;top:0vh;left:100vw;background-color: aquamarine;position: absolute; z-index: 999;">
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('body').fadeIn(1500)
+        })
+    </script>
+
+    <style>
+        .markuro {
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            color: black;
+            /* text-align: center; */
+            /* line-height: 60vh; */
+            /* line-height: calc(4vw + 15px); */
+            /* font-size: 4vw; */
+            padding: 40vh 0;
+        }
+
+        .ac {
+            /*display: flex; */
+            position: absolute;
+            margin: auto;
+            top: 30vh;
+            /* bottom: 0; */
+            left: 0;
+            right: 0;
+            z-index: 100000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ac>img {
+            width: 90vw;
+            display: block;
+            /* position: absolute; */
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        .ac>div {
+            height: 16vh;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            /* position: relative; */
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* width: 100vw; */
+            /* height: 100%; */
+            text-align: center;
+            line-height: calc(5vw + 15px);
+            font-size: 4vw;
+            z-index: 5;
+        }
+
+        .ac>div p {
+            margin: 0;
+        }
+    </style>
+    <div class="markuro">
+    </div>
+    <div class="ac">
+        <img src="./res/scroll/scroll.webp" alt="">
+        <div>在每一个页面<br>您都可以通过上滑让页面全屏显示<br>
+            字体的加载速度较慢，请耐心等待<br>
+            请点击卷轴以继续</div>
+    </div>
+    <script src="./js/theVeryBeginning.js">
+
+    </script>
+    <script>
+        document.querySelector('.ac').addEventListener('click', () => {
+            
+            beginning()
+            document.querySelector('#sunMoved').className = 'sunMoved'
+            document.querySelector('#TheSun').className = 'TheSun'
+            document.querySelector('#lighton').className = 'lighton'
+            $('.markuro').fadeOut(1000)
+            $('.ac').fadeOut(1000)
+        })
+
+    </script>
+
+</body>
+
+</html>

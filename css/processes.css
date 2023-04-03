@@ -1,0 +1,262 @@
+.innerNabe {
+    position: absolute;
+    top: 40vh;
+    left: 35vw;
+    /* top: 50%; */
+    /* left: 50%;  */
+    /*transform: translate(-50%,-50%)!important; */
+}
+
+.nabe {
+    position: absolute;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: block;
+}
+
+.nabe img {
+    height: 20vh;
+}
+
+@font-face {
+    font-family: 'Alibaba-PuHuiTi-Regular';
+    src: url("../font/Alibaba-PuHuiTi-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'HYShangWeiShouShuW';
+    src: url('../font/HYShangWeiShouShuW.ttf');
+}
+
+@font-face {
+    font-family: 'FZFengYKSJF';
+    src: url('../font/FZFengYKSJF_Cu.TTF');
+}
+
+.process-name {
+    padding: 0 4vw;
+    font-size: 3vh;
+    font-family: 'HYShangWeiShouShuW';
+    position: relative;
+    z-index: 10;
+    /* width: calc(100vw - 9rem); */
+    margin-bottom: 5px;
+    /* transform: scale(.85)!important; */
+
+    left: 140%;
+}
+
+.process-introduce {
+    padding: 0 4vw;
+    font-size: 1.7vh;
+    line-height: 3vh;
+    /* font-family: 'Alibaba-PuHuiTi-Regular'; */
+    /* font-family: 'HYShangWeiShouShuW'; */
+    font-family: 'FZFengYKSJF';
+    /* font-weight: bolder; */
+    position: relative;
+    z-index: 10;
+    /* width: calc(100vw - 9rem); */
+    margin: 0;
+    left: 160%;
+
+    /* width: 100vw; */
+    /* padding-top: 5%; */
+    /* padding-right: 0%; */
+    /* transform: scale(.85)!important; */
+}
+
+.move-elements {
+    position: absolute;
+    /* background-color: cyan; */
+    /* opacity: 0.3; */
+    width: calc(100vh /16 * 9);
+    height: 100vh;
+    /* z-index: 3000; */
+    left: 0px;
+    top: 0px;
+}
+
+.movable-ele {
+    position: absolute;
+    /* left: 0px;
+    top:0px; */
+    z-index: 2000;
+    touch-action:none;
+}
+
+.movable-ele img {
+    display: block;
+    /* position: relative;
+    top: -2.5%;
+    left: -2.5%; */
+    transform: translate(-50%, -50%);
+}
+
+.hands {
+    position: relative;
+    height: 7vh;
+    width: 10vh;
+    background-color: transparent;
+}
+
+.handmove1 {
+    animation: handmove1 ease-in-out 1s alternate infinite;
+}
+
+@keyframes handmove1 {
+    0% {
+        top: 37%;
+        left: 28%
+    }
+
+    100% {
+        top: 35%;
+        left: 35%;
+    }
+}
+
+.handmove2 {
+    animation: handmove2 ease-in-out 1s alternate infinite;
+}
+
+@keyframes handmove2 {
+    0% {
+        top:35%;
+        left: 63%
+    }
+
+    100% {
+        top: 35%;
+        left: 50%;
+    }
+}
+
+#touchable-board {
+    position: absolute;
+    height: 50vh;
+    width: 30vh;
+    background-color: black;
+    opacity: 0;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    touch-action:none;
+}
+
+.cap {
+    position: absolute;
+    height: 25vh;
+    width: 30vh;
+    background-color: black;
+    opacity: 0;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, 0);
+    z-index: 2003;
+	touch-action:none;
+	/*touch-action:pan-y;*/
+}
+
+.onshelf{
+    display: block!important;
+}
+
+
+.handtips{
+    position: absolute;
+    height: 5vh;
+    z-index: 5000;
+}
+.handtips img{
+    height: 5vh;
+    transform-origin: bottom center;
+    /* transform:rotate(-50deg) */
+}
+
+.line{
+    position: absolute;
+}
+
+/* "33%","37%","37%","71%" */
+.first-page-hand{
+    animation: firstHand 1.4s ease-in-out 
+}
+@keyframes firstHand{
+    0%{
+        top: 33%;
+    }
+    50%{
+        top: 30%;
+    }
+    100%{
+        top: 37%;
+    }
+}
+
+.second-page-hand{
+    animation: secondHand 1.5s ease-in-out infinite
+}
+@keyframes secondHand{
+    0%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(-50deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+
+.third-page-hand{
+    animation: thirdtHand 1.4s ease-in-out 
+}
+@keyframes thirdtHand{
+    0%{
+        top: 40%;
+    }
+    35%{
+        top: 42%;
+    }
+    100%{
+        top: 30%;
+    }
+}
+
+.forth-page-hand{
+    top: 45%;
+    left: 50%;
+    animation: forthHand 2s ease-in-out infinite
+}
+.forth-page-hand img{
+   transform: rotate(-10deg);
+}
+@keyframes forthHand{
+    0%{
+        top:45%;
+    }
+    50%{
+        top:35%;
+    }
+    100%{
+        top:45%;
+    }
+}
+
+.sixth-page-hand{
+    animation: sixthHand 1.4s ease-in-out 
+}
+@keyframes sixthHand{
+    0%{
+        top: 38%;
+    }
+    40%{
+        top: 42%;
+    }
+    100%{
+        top: 20%;
+    }
+}

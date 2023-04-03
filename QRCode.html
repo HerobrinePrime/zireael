@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>九闷九烘，只为这一叶</title>
+    <script src="./js/jquery.mim.js"></script>
+    <style type="text/css">
+        body,
+        html {
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        * {
+
+            touch-action: none;
+
+            touch-action: pan-y;
+
+        }
+
+        .bg {
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .bg>img {
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+
+        .all {
+            position: absolute;
+            top: 0;
+            /* height: 100vh; */
+            width: 100vw;
+        }
+
+        .series {
+            height: auto !important;
+            width: 100vw;
+            bottom: 0;
+            top: auto !important;
+        }
+
+        .scroll {
+            display: none;
+            position: absolute;
+            /* top: 0; */
+            left: 0;
+            width: 70vw;
+            margin: 0 auto;
+            right: 0;
+            bottom: 5vh;
+            z-index: 1000;
+        }
+
+        .scroll #scroll {
+            display: block;
+            width: 100%;
+        }
+
+        .scroll #mouji {
+            display: block;
+            width: 66%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body style="display: none;">
+    <div class="bg">
+        <img src="./res/final/bg.webp" alt="">
+    </div>
+
+    <img src="./res/final/cloud1.webp" class="all" id="cloud1">
+    <img src="./res/final/cloud2.webp" class="all" id="cloud2">
+
+    <img src="./res/final/series0.webp" class="all series" id="series0" style="display:none;z-index: 50;">
+    <img src="./res/final/series1.webp" class="all series" id="series1" style="display:none;z-index: 45;">
+    <img src="./res/final/series2.webp" class="all series" id="series2" style="display:none;z-index: 49;">
+    <img src="./res/final/series3.webp" class="all series" id="series3" style="display:none;z-index: 46;">
+    <img src="./res/final/series4.webp" class="all series" id="series4" style="opacity: 0;bottom: 15vh;z-index: 55;">
+    <img src="./res/final/series5.webp" class="all series" id="series5" style="display:none;z-index: 56;">
+
+    <div class="scroll">
+        <img id="scroll" src="./res/scroll/scroll.webp" alt="">
+        <img id="mouji" src="./res/final/mouji.webp" alt="">
+    </div>
+
+
+</body>
+<script>
+    $(document).ready(function () {
+        $('body').fadeIn(1000, () => {
+            $('#series3').fadeIn(500, () => {
+                $('#series0').fadeIn(800, () => {
+                    $('#series1').fadeIn(1000, () => {
+                        $('#series2').fadeIn(1000, () => {
+                            $('#series4').animate({
+                                opacity: 1,
+                                bottom: 0
+                            }, 800, 'swing', () => {
+                                $('#series5').fadeIn(1200, () => {
+                                    setTimeout(() => {
+                                        $('.scroll').fadeIn(1200)
+                                    }, 300)
+                                })
+
+                            })
+                        })
+                    })
+                })
+            })
+        })
+
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,334 @@
+*{
+
+	touch-action:none;
+
+	touch-action:pan-y;
+
+}
+body, html {
+    margin: 0px;
+    height: 0px;
+    height: 100%;
+    width: 100%;
+}
+#icons{
+    width: 100%;
+}
+.main {
+    /* background-color: wheat; */
+    background-image: url("../res/fir/beijing101.webp");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    /* display: none; */
+}
+
+.viewwindow {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: auto;
+    position: relative;
+}
+
+.leaf {
+    position: absolute;
+    top: 47vh;
+    left: 10vw;
+    z-index: 999;
+}
+
+.fir {
+    background-image: url("../res/fir/beijing101.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    overflow: hidden;
+    left: 0vw;
+    z-index: 100;
+}
+
+/* #f{
+    height:92vh;
+    width: 100vw;
+    background-color:royalblue;
+    position: absolute;
+    left: 0vw;
+    z-index: 0;
+}
+#sec{
+    height:92vh;
+    width: 100vw;
+    background-color: turquoise;
+    position: absolute;
+    left: 100vw;
+    z-index: 0;
+}
+#thi{
+    height:92vh;
+    width: 100vw;
+    background-color: rgb(7, 8, 3);
+    position: absolute;
+    left: 100vw;
+    z-index: 0;
+}
+#for{
+    height:92vh;
+    width: 100vw;
+    background-color: rgb(134, 130, 130);
+    position: absolute;
+    left: 100vw;
+    z-index: 0;
+}
+#fiv{
+    height:92vh;
+    width: 100vw;
+    background-color: rgb(150, 99, 33);
+    position: absolute;
+    left: 100vw;
+    z-index: 0;
+}
+#six{
+    height:92vh;
+    width: 100vw;
+    background-color: rgb(141, 224, 64);
+    position: absolute;
+    left: 100vw;
+    z-index: 0;
+}
+#sev{
+    height:92vh;
+    width: 100vw;
+    background-color: rgb(133, 64, 224);
+    position: absolute;
+    left: 100vw;
+    z-index: 0;
+} */
+
+#button_container {
+    width: 100%;
+    height: 9vh;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    list-style-type: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.button_lis {
+    flex: 1;
+    height: 9vh;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button_lis img {
+    height: 7vh;
+}
+
+.blockspan{
+    position: absolute;
+    /* flex: 1; */
+    width: calc(100vw / 6);
+    background-color: black;
+    height: 9vh;
+    top: 0vh;
+    opacity: 0.5;
+}
+
+.on {
+    background-color: rgba(83,177,132,.5);
+    transition: .7s;
+    animation: change2 .7s forwards;
+    border-radius: 20%;
+}
+
+
+@keyframes change2 {
+    0% {
+        border-radius: 50%;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        border-radius: 30%;
+    }
+}
+
+.out {
+    background-color: transparent;
+    transition: 0.7s;
+    animation: change1 0.7s;
+}
+
+@keyframes change1 {
+    0% {
+        border-radius: 20%;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        border-radius: 50%;
+    }
+}
+
+.on img {
+    /* margin: auto; */
+    /* transition: 2s; */
+    animation: changeImg .6s;
+}
+.fireclick{
+    animation: changeImg .6s;
+}
+
+@keyframes changeImg {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(20deg);
+    }
+    40% {
+        transform: rotate(-20deg);
+    }
+    60% {
+        transform: rotate(10deg);
+    }
+    80% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.leafRot {
+    animation: changeImg infinite .6s;
+}
+
+.zoomIn {
+    background-size: 100%;
+    background-position: 0% 0%;
+    animation: zoomIn 3s forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        background-size: 100%;
+        background-position: 0% 0%;
+    }
+    to {
+        background-size: 300%;
+        background-position: 5% 50%;
+    }
+}
+
+.back {
+    /* display: flex; */
+    height: 15vw;
+    width: 15vw;
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    z-index: 1001;
+    transition: .6s;
+}
+.back img{
+    height: 15vw;
+    width: 15vw;
+}
+.backon {
+    transform: rotate(-180deg);
+}
+.backmenu {
+    background-color: white;
+    border-radius: 10px;
+    opacity: .8;
+    position: absolute;
+    top: 12vw;
+    left:-25vw;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.8);
+}
+.backmenu div{
+    margin:6vw 3vw;
+    display: flex;
+}
+.backmenu div img{
+    width: 10vw;
+    height: 10vw;
+}
+.backmenu div span{
+    width: 10vw;
+    height: 10vw;
+    line-height: 10vw;
+    font-size: 5vw;
+    text-align: center;
+}
+.innerholder{
+    height: 100vh;
+    width: calc(100vh / 16 * 9);
+    /* position: relative; */
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.passageholder{
+    position: absolute;
+    /* background-color: cyan; */
+    display: none; 
+    z-index: 3002;
+    left: 0;
+    right: 0;
+    width: calc(100vh / 16 * 5 );
+    margin: auto;
+    color: #000!important;
+    background: no-repeat center/100% 100% border-box transparent url(../res/scroll/scroll.webp) ;
+    padding: 5vh;
+}
+.warning{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* height: 30vh; */
+    /* width: 55vw; */
+    padding: 4vh;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 3vh;
+    z-index: 9999;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.warning img{
+    display: block;
+    width: 21vh;
+    margin-bottom: 2vh;
+}
+.warning span{
+    display: block;
+    color: #8a8a8a;
+    font-size: 3vh;
+}
+.warning div{
+    margin-top: 2vh;
+    display: block;
+    color: #8a8a8a;
+    font-size: 3vh;
+}

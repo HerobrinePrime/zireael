@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>制作流程</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <!-- <link rel="icon" href="./res/favicon.ico" type="image/x-icon"> -->
+    <script src="js/jquery.mim.js"></script>
+    <script src="./js/blockdisable.js"></script>
+    <script src="./js/anime.js"></script>
+    <script src="./js/preventSlideWhenForbidden.js"></script>
+    <script src="./js/back.js"></script>
+    <style type="text/css">
+        @import url("css/main.css");
+    </style>
+    <style type="text/css">
+        @import url("css/fir.css");
+    </style>
+    <style>
+        @import url("css/swiper-bundle.min.css");
+    </style>
+    <style>
+        @import url("css/swiper.css");
+    </style>
+    <link rel="stylesheet" href="css/processes.css">
+    <style>
+        #icons {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 999;
+
+        }
+
+        .repeat {
+            color: #5d7e63;
+            font-size: 4vh;
+            font-family: 'FZFengYKSJF';
+            font-weight: bolder;
+            background-color: #f8f6f3;
+            border: 5px ridge bisque;
+            border-radius: 3px;
+            text-align: center;
+            width: 20vh;
+            height: 5vh;
+            line-height: 5vh;
+            margin: auto;
+            margin-bottom: -2vh;
+        }
+    </style>
+
+
+</head>
+
+<body style="opacity: 0;overflow:hidden">
+    <div class="process-name passageholder" style="opacity: 1;
+    position: absolute;
+    top:-90vh;
+    height: 60px;">预加载</div>
+    <div class="process-name" style="opacity: 1;
+    position: absolute;
+    top:-90vh;
+    font-family: 'FZFengYKSJF';
+    height: 60px;">预加载</div>
+    <div class="passageholder" style="display: block;
+    position: absolute;
+    top: -90vh;
+    left: 5vw;
+    height: 1vw;
+    width: 1vw;"></div>
+
+    <script src="js/mainOnLoad.js"></script>
+    <div class='main'>
+        <!-- <script> $(".main").hide();</script> -->
+        <div id="backs" class="back"><img src="res/back.webp"></div>
+        <div class="backmenu">
+            <div onclick="mainhtml()"><img src="res/YY_zhuye_3.webp"><span>主页</span></div>
+            <div onclick="reTurn()"><img src="res/re.webp"><span>返回</span></div>
+        </div>
+
+        <script>
+            // $(".main").hide();
+            function reTurn() {
+                history.go(-1);
+                // history.back();
+                // console.log(history);
+            }
+
+            function mainhtml() {
+                location.href = "index.html"
+            }
+        </script>
+
+        <!-- <a href="#" style="display: flex;position: absolute;top: 0vh;right: 0vw;z-index: 9;" onclick="alterSlide()">
+            可滑动切换
+        </a> -->
+        <!-- <a href="#" d style="display: flex;height: 50px;width: 50px;position: absolute;top: 5.5vh;right: 0vw;z-index: 9;"
+            onclick="alterClick()">
+            可点击模拟</a> -->
+        <!-- style="display: none;" -->
+
+        <!-- <div class="leaf" ><img src="res/icons/leaf.webp" style="height:20px"></div>
+                        <script>
+                            var leaf = document.querySelector(".leaf");
+                            /*setInterval(function(){
+                                leaf.className = "leaf leafRot";
+                                setTimeout(function(){
+                                    leaf.className = "leaf";
+                                },600);
+                            },3000); */
+                            leaf.addEventListener("click",function(){
+                                
+                            });
+                        </script> -->
+        <div class="viewwindow">
+
+            <!-- <div id="f"></div>
+                <div id="sec"></div>
+                <div id="thi"></div>
+                <div id="for"></div>
+                <div id="fiv"></div>
+                <div id="six"></div>
+                <div id="sev"></div> -->
+
+
+
+            <div style="--swiper-navigation-color:#000; --swiper-pagination-color:#000" class="swiper mySwiper">
+                <div class="parallax-bg" style="background-image: url();" data-swiper-parallax="-65%">
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="firstPage">
+
+                        <div class="innerholder">
+
+                            <div class="handtips">
+                                <img src="./res/hand.webp" alt="">
+                            </div>
+                            <div class="line"></div>
+
+                            <div class="swiper-slide_bgs"><img style="height: 100vh;"></div>
+                            <!-- <div class="innerNabe" data-swiper-parallax-y="300" data-swiper-parallax-opacity="0"></div> -->
+
+                            <div id="passageholder1" class="passageholder" data-swiper-parallax="-500"
+                                data-swiper-parallax-opacity="0.5" style="top: 54%;">
+                                <div class="process-name" data-swiper-parallax="-100" data-swiper-parallax-opacity="0"
+                                    style="
+                            color:#000;
+                            ">摊青：</div>
+                                <div class="process-introduce" data-swiper-parallax="-200"
+                                    data-swiper-parallax-opacity="0" style="
+                            color:#000;
+                            ">
+                                    将采摘下来的茶叶均匀摊在竹匾上，放在通风的地方自然萎凋，平阳黄汤摊青的时间稍长，视天气情况，摊青时间为12、-15小时，最长可超20小时。
+                                </div>
+                            </div>
+
+                            <div data-swiper-parallax-x="-100" data-swiper-parallax-opacity="0">
+                                <img src="res/items/charong.webp" style="height: 100vh;">
+                            </div>
+
+                            <div class="move-elements" id="first-process">
+                                <div class="movable-ele interactive" id="leaf1" data-swiper-parallax-x="-100"
+                                    data-swiper-parallax-opacity="0" style="
+                            left: 40%;
+                            top: 33%;
+                            ">
+                                    <img src="res/items/leaf1.webp" style="height: 5vh;">
+                                </div>
+                                <div class="movable-ele interactive" id="leaf2" data-swiper-parallax-x="-200"
+                                    data-swiper-parallax-opacity="0" style="
+                            left: 40%;
+                            top: 33%;
+                            ">
+                                    <img src="res/items/leaf2.webp" style="height: 5vh;">
+                                </div>
+                                <div class="movable-ele interactive" id="leaf3" data-swiper-parallax-x="-300"
+                                    data-swiper-parallax-opacity="0" style="
+                            left: 40%;
+                            top: 33%;
+                            ">
+                                    <img src="res/items/leaf3.webp" style="height: 5vh;">
+                                </div>
+
+                            </div>
+
+                            <script src="./js/firstProcess.js"></script>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide" id="secondPage">
+
+                        <div class="innerholder">
+
+                            <div class="handtips">
+                                <img class="second-page-hand" src="./res/hand.webp" alt="">
+                            </div>
+
+                            <div id="passageholder2" class="passageholder" data-swiper-parallax="-500"
+                                data-swiper-parallax-opacity="0.5" style="top: 18%;">
+                                <div class="process-name" data-swiper-parallax="-100" data-swiper-parallax-opacity="0"
+                                    style="
+                            color: #000;
+                            ">杀青：</div>
+                                <div class="process-introduce" data-swiper-parallax="-200"
+                                    data-swiper-parallax-opacity="0" style="
+                            color: #000;
+                            ">
+                                    用铁锅杀青，温度200度，锅底微微显红，就可以投叶了，投叶200克左右，要求用力均匀，翻动要快，抖散结合，杀匀杀透。
+
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide_bgs"><img style="height: 100vh;"></div>
+
+                            <div>
+                                <div id="fire" class="interactive" style="
+                                position: absolute;
+                                top: 55.5%;
+                                left: 23%;
+                                width: 51%;
+                                height: 12%;
+                                background-color: skyblue;
+                                z-index: 3001;
+                                opacity: 0;
+                                "></div>
+                            </div>
+
+                            <div class="move-elements" id="second-process">
+                                <div id="before-toast-tea" data-swiper-parallax-x="-100"
+                                    data-swiper-parallax-opacity="0"
+                                    style="position: absolute;top: 36%;left: 28%;display: block;">
+                                    <img src="res/items/chaochaqian.webp" style="height:11vh;">
+                                </div>
+                                <div id="after-toast-tea" data-swiper-parallax-x="-100" data-swiper-parallax-opacity="0"
+                                    style="position: absolute;top: 36%;left: 28%;display: none;">
+                                    <img src="res/items/chaochahou.webp" style="height:11vh;">
+                                </div>
+                            </div>
+                            <script src="./js/secondProcess.js"></script>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" id="thirdPage">
+
+                        <div class="innerholder">
+
+                            <div class="handtips">
+                                <img src="./res/hand.webp" alt="">
+                            </div>
+
+                            <div id="passageholder3" class="passageholder" data-swiper-parallax="-500"
+                                data-swiper-parallax-opacity="0.5" style="top: 56%;">
+                                <div class="process-name" data-swiper-parallax="-100" data-swiper-parallax-opacity="0"
+                                    style="
+                            color:#000;
+                            ">闷黄：</div>
+                                <div class="process-introduce" data-swiper-parallax="-200"
+                                    data-swiper-parallax-opacity="0" style="
+                            color:#000;
+                            ">
+                                    趁热把茶叶装进木桶，用棉布盖严，加热至45度左右。闷黄时间3至5小时，其间要注意观察茶叶变黄的情况。
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide_bgs"><img style="height: 100vh;"></div>
+                            <!-- <div class="innerNabe" data-swiper-parallax-y="-300" data-swiper-parallax-opacity="0"></div> -->
+
+                            <div class="move-elements" id="third-process">
+                                <div data-swiper-parallax-x="-100" data-swiper-parallax-opacity="0">
+                                    <img src="res/items/tong.webp" style="height: 100vh;">
+                                </div>
+
+                                <div id="after-steam" data-swiper-parallax-x="-200" data-swiper-parallax-opacity="0"
+                                    style="position: absolute;top: 26%;left: 21%;display: none;">
+                                    <img src="res/items/menhuanghou.webp" style="height: 9vh;">
+                                </div>
+                                <div id="before-steam" data-swiper-parallax-x="-200" data-swiper-parallax-opacity="0"
+                                    style="position: absolute;top: 26%;left: 21%;display: block;">
+                                    <img src="res/items/menhuangqian.webp" style="height: 9vh;">
+                                </div>
+
+                                <div id="cloth" class="movable-ele interactive" data-swiper-parallax-x="-500"
+                                    data-swiper-parallax-opacity="0" style="top: 41%;left: 81%;display: block;">
+                                    <img src="res/items/cloth.webp" style="height: 13vh;">
+                                </div>
+
+                            </div>
+                            <script src="./js/thirdProcess.js"></script>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" id="forthPage">
+
+                        <div class="innerholder">
+
+                            <div class="handtips forth-page-hand">
+                                <img src="./res/hand.webp" alt="">
+                            </div>
+
+                            <div id="passageholder4" class="passageholder" data-swiper-parallax="-500"
+                                data-swiper-parallax-opacity="0.5" style="top: 54%;">
+                                <div class="process-name" data-swiper-parallax="-100" data-swiper-parallax-opacity="0"
+                                    style="
+                            top: 55%;
+                            color:#000;
+                            ">揉捻：</div>
+                                <div class="process-introduce" data-swiper-parallax="-200"
+                                    data-swiper-parallax-opacity="0" style="
+                            top: 59%;
+                            color:#000;
+                            ">
+                                    闷黄后趁热揉捻，在湿热作用下有利于揉捻成条。揉捻时先轻后重，时间控制在30分钟以内，（黄芽茶手工制作在炒青时可以边炒边揉。杀青时，待叶质柔软，稍带粘性即可用双手揉搓，用力要轻，防止茶汁挤出，色泽变黑揉捻时间约为10分钟，条形自然弯曲）。
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide_bgs"><img style="height: 100vh;"></div>
+                            <!-- <div class="innerNabe" data-swiper-parallax-y="-300" data-swiper-parallax-opacity="0"></div> -->
+
+                            <div class="move-elements" id="forth-process">
+                                <div data-swiper-parallax-x="-100" data-swiper-parallax-opacity="0">
+                                    <img src="res/items/plane.webp" style="height: 100vh;">
+                                </div>
+                                <div id="coolbefore" data-swiper-parallax-x="-300" data-swiper-parallax-opacity="0">
+                                    <img src="res/items/chayetanliang.webp" style="height: 100vh;display: block;">
+                                </div>
+                                <div id="coolafter" style="display: none;" data-swiper-parallax-x="-300"
+                                    data-swiper-parallax-opacity="0">
+                                    <img src="res/items/chayetanliang.webp" style="height: 100vh">
+                                </div>
+                                <div data-swiper-parallax-x="-200" data-swiper-parallax-opacity="0">
+                                    <img src="res/items/takei.webp" style="height: 100vh;">
+                                </div>
+                                <div data-swiper-parallax-x="-400" data-swiper-parallax-opacity="0">
+                                    <img src="res/items/stick.webp" style="height: 100vh;">
+                                </div>
+
+                                <div id="righthand" class="movable-ele interactive" data-swiper-parallax-opacity="0"
+                                    style="top: 35%;left: 63%;opacity: 1;transform: translate3d(0px, 0px, 0px);transition-duration: 0ms;">
+                                    <div class="hands" style="left:0;top:0;transform: rotate(319deg);">
+                                        <img src="./res/full_hand2.webp"
+                                            style="height: 8vh;transform: translate(0, 0);">
+                                    </div>
+                                </div>
+                                <div id="lefthand" class="movable-ele interactive" data-swiper-parallax-opacity="0"
+                                    style="top: 37%;left: 28%;opacity: 1;transform: translate3d(0px, 0px, 0px);transition-duration: 0ms;">
+                                    <div class="hands" style="left:0;top:0;transform: rotate(34deg);">
+                                        <img src="./res/full_hand.webp" style="height: 8vh;transform: translate(0, 0);">
+                                    </div>
+                                </div>
+
+                                <div id="touchable-board" class="interactive"></div>
+                            </div>
+                        </div>
+                        <script src="./js/fourthProcess.js"></script>
+                    </div>
+                    <div class="swiper-slide" id="fifthPage">
+                        <div class="innerholder">
+
+                            <div class="handtips">
+                                <img src="./res/hand.webp" alt="">
+                            </div>
+
+                            <div id="passageholder5" class="passageholder" data-swiper-parallax="-500"
+                                data-swiper-parallax-opacity="0.5" style="top: 12%;left: 0;">
+                                <div class="process-name" data-swiper-parallax="-100" data-swiper-parallax-opacity="0"
+                                    style="
+                            color: #000;
+                            ">烘焙：</div>
+                                <div class="process-introduce" data-swiper-parallax="-200"
+                                    data-swiper-parallax-opacity="0" style="
+                            color: #000;
+                            ">
+                                    将闷黄揉捻后的茶叶均匀摊放在焙笼上，中心较厚，四周稍薄，叶摊好后，再置于火炉上，手离摊叶5厘米处有热感，10分钟左右，烘至七成干即可。
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide_bgs"><img style="height: 100vh;"></div>
+                            <!-- <div class="innerNabe" data-swiper-parallax-y="-300" data-swiper-parallax-opacity="0"></div> -->
+
+                            <div class="move-elements" id="fifth-process">
+                                <div data-swiper-parallax-x="-10" data-swiper-parallax-opacity="0">
+                                    <img src="res/items/ash1.webp" style="height: 100vh;">
+                                </div>
+                                <div class="flames" data-swiper-parallax-y="0" data-swiper-parallax-opacity="0"
+                                    data-swiper-parallax-duration="4000" style="display: none;">
+                                    <img src="res/items/fire2.webp" style="height: 100vh;">
+                                </div>
+                                <div class="flames" data-swiper-parallax-y="0" data-swiper-parallax-opacity="0"
+                                    data-swiper-parallax-duration="2500" style="display: none;">
+                                    <img src="res/items/fire3.webp" style="height: 100vh;">
+                                </div>
+
+                                <div id="cap" class="movable-ele" data-swiper-parallax-x="0"
+                                    data-swiper-parallax-opacity="0.5" style="
+                                left: 50%;
+                                top: 63.6%;
+                                ">
+                                    <img src="res/items/lid.webp"
+                                        style="height: 100vh;transform: translate(-50%, -65%);">
+                                </div>
+                                <div class="cap interactive"></div>
+
+                                <div data-swiper-parallax-x="-10" data-swiper-parallax-opacity="0" style="
+                                position: relative;
+                                z-index:2001;
+                                ">
+                                    <img src="res/items/fire1.webp" style="height: 100vh;">
+                                </div>
+
+                                <div id="hongbei1" data-swiper-parallax-x="-100" data-swiper-parallax-opacity="0" style="
+                                position: relative;
+                                z-index:2001;
+                                ">
+                                    <img src="res/items/hongbei1.webp" style="height: 100vh;">
+                                </div>
+                                <div id="hongbei2" data-swiper-parallax-x="-100" data-swiper-parallax-opacity="0" style="
+                                position: relative;
+                                z-index:2001;
+                                display: none;
+                                ">
+                                    <img src="res/items/hongbei2.webp" style="height: 100vh;">
+                                </div>
+
+                            </div>
+                        </div>
+                        <script src="./js/fifthProcess.js"></script>
+                    </div>
+                    <div class="swiper-slide" id="sixthPage">
+                        <div class="innerholder">
+
+                            <div class="handtips">
+                                <img src="./res/hand.webp" alt="">
+                            </div>
+
+                            <div id="passageholder6" class="passageholder" data-swiper-parallax="-500"
+                                data-swiper-parallax-opacity="0.5" style="top: 50%;left: 0%;display: none;">
+                                <div class="process-name" data-swiper-parallax="-100" data-swiper-parallax-opacity="0"
+                                    style="
+                                    color:#000;
+                                    ">干燥：</div>
+                                <div class="process-introduce" data-swiper-parallax="-200"
+                                    data-swiper-parallax-opacity="0" style="
+                                    color:#000;
+                                    ">
+                                    采用低温慢烘法，温度60度左右，每笼摊叶4—5斤，每隔10分钟翻拌一次，手势要轻，当手揉茶叶成粉末时，即可下烘。
+                                </div>
+                                <div class="repeat" onclick="jump()">复烘复焖</div>
+
+                            </div>
+
+                            <div class="swiper-slide_bgs"><img style="height: 100vh;"></div>
+                            <!-- <div class="innerNabe" data-swiper-parallax-y="-300" data-swiper-parallax-opacity="0"></div> -->
+
+                            <div class="move-elements dries" id="sixth-process">
+
+
+                                <div id="dry2" class="movable-ele interactive" style="
+                                    left: 15%;
+                                    top: 34%;
+                                    ">
+                                    <div data-swiper-parallax-x="-200" data-swiper-parallax-opacity="0">
+                                        <img src="res/items/dry2.webp" style="height: 9vh;">
+                                    </div>
+                                </div>
+                                <div id="dry1" class="movable-ele interactive" style="
+                                    left: 34%;
+                                    top: 39%;
+                                    ">
+                                    <div data-swiper-parallax-x="-400" data-swiper-parallax-opacity="0">
+                                        <img src="res/items/dry1.webp" style="height: 10vh;">
+                                    </div>
+                                </div>
+
+
+                                <div class="airs">
+                                    <div id="air2" class="movable-ele"
+                                        style="display: none;top: 19%;left: 88%;z-index: 100;">
+                                        <div data-swiper-parallax-x="-200" data-swiper-parallax-opacity="0">
+                                            <img src="res/items/air2.webp" style="height: 3.5vh;">
+                                        </div>
+                                    </div>
+
+                                    <div id="air1" class="movable-ele"
+                                        style="display: none;top: 29%;left: 87%;z-index: 100;">
+                                        <div data-swiper-parallax-x="-400" data-swiper-parallax-opacity="0">
+                                            <img src="res/items/air1.webp" style="height: 3.5vh;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div data-swiper-parallax-x="-10" data-swiper-parallax-opacity="0"
+                                    style="position:relative;z-index: 99;">
+                                    <img src="res/items/shelf.webp" style="height: 100vh;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="./js/sixthProcess.js"></script>
+
+                    <script>
+                        $.each($(".swiper-slide_bgs"), function (index, domele) {
+                            $(domele).children("img")[0].src = "res/backgrounds/" + index + ".webp";
+                            // $(domele).children("img").css("width","100vw");
+                            // domele.style.background = "no-repeat center/cover url('/res/backgrounds/" + index + ".webp')"
+                            // console.log(domele.seyle);
+                        });
+
+
+                    </script>
+
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div> -->
+            </div>
+
+        </div>
+
+        <div id="warning" class="warning" style="display: none;">
+            <img src="./res/tips/warning.webp" />
+            <div>现在还不能切换</div>
+        </div>
+        <div id="pass" class="warning" style="display: none;">
+            <img src="./res/tips/pass.webp" />
+            <div>
+                已经可以切换了
+            </div>
+        </div>
+
+        <div id="icons">
+            <!-- <ul class="blockul">
+                <li class="blockli"></li>
+                <li class="blockli"></li>
+                <li class="blockli"></li>
+                <li class="blockli"></li>
+                <li class="blockli"></li>
+                <li class="blockli"></li>
+            </ul> -->
+            <div id="button_container">
+                <!-- <li class='on'><img src="res/icons/icons/1.webp" class=""></li>
+                <li class=''><img src="res/icons/icons/2.webp" class=""></li>
+                <li class=''><img src="res/icons/icons/3.webp" class=""></li>
+                <li class=''><img src="res/icons/icons/4.webp" class=""></li>
+                <li class=''><img src="res/icons/icons/5.webp" class=""></li>
+                <li class=''><img src="res/icons/icons/6.webp" class=""></li>
+                <li class=''><img src="res/icons/icons/7.webp" class=""></li> -->
+
+                <!-- <span class="blockspan"></span>
+                <span class="blockspan"></span>
+                <span class="blockspan"></span>
+                <span class="blockspan"></span>
+                <span class="blockspan"></span>
+                <span class="blockspan"></span> -->
+
+                <span class="button_lis on"></span>
+                <span class="button_lis"></span>
+                <span class="button_lis"></span>
+                <span class="button_lis"></span>
+                <span class="button_lis"></span>
+                <span class="button_lis"></span>
+                <span class="button_lis"></span>
+
+            </div>
+
+            <script src="js/swiper-bundle.js"></script>
+            <script>
+                // var nabe = $("<div class='nabe'><img src='res/icons/icons/2.webp'></div>");
+                // changeNabeParent();
+
+                var swiper = new Swiper(".mySwiper", {
+                    effect: 'coverflow',
+                    // slidesPerView: 3,
+                    centeredSlides: true,
+                    coverflowEffect: {
+                        rotate: 30,
+                        stretch: 30,
+                        depth: -50,
+                        modifier: 2,
+                        slideShadows: false
+                    },
+
+                    speed: 1000,
+                    parallax: true,
+                    allowTouchMove: true,
+                    pagination: {
+                        el: "#button_container",
+                        bulletElement: 'span',
+                        bulletClass: 'button_lis',
+                        bulletActiveClass: 'on',
+                        clickable: true,
+                    },
+                    on: {
+                        paginationUpdate: function () {
+                            // forbideSlide();
+                            // changeNabeParent();
+                            // console.log($(".on").index());
+                            // console.log($(".blockspan"));
+
+                            setTimeout(function () {
+                                if ($(".on").attr("fn") == 1) {
+                                    ableSlide();
+                                }
+                                else {
+                                    forbideSlide();
+                                }
+                                // $(".on").attr("visited", 1);
+                            }, 100);
+
+                        },
+                        paginationRender: function () {
+                            // changeNabeParent();
+                            $.each($(".button_lis"), function (index, ele) {
+                                // ele.style.backgroundImage="url(/res/icons/icons/"+(index+1)+".webp)";
+                                // console.log(ele.style.backgroundImage);
+
+                                let img = $("<img src='res/icons/icons/" + (index + 1) + ".webp'>");
+                                $(ele).html(img);
+
+
+                                // $(ele).attr("visited", 0);
+                                $(ele).attr("fn", 0);
+                                //遮罩层
+                                $("#button_container").append($("<span class='blockspan' style='left:calc(100vw / 6 * " + index + ");'></span>"));
+                            })
+                            // $(".main").hide(100, function () {
+                            //     forbideSlide();
+                            // });
+                            $(".blockspan").eq(0).animate({
+                                borderRadius: "50%",
+                                opacity: "0"
+                            }, 1000, function () {
+                                $(this).hide(0);
+                            });
+                            $("body").animate({
+                                opacity: 1
+                            }, 1500)
+                        },
+                    }
+                    // navigation: {
+                    //     nextEl: ".swiper-button-next",
+                    //     prevEl: ".swiper-button-prev",
+                    // },
+                });
+
+                // var nabe = $("<div class='nabe'><img src='res/icons/icons/2.webp'></div>");
+                function changeNabeParent() {
+                    // console.log($(".innerNabe"));
+                    // console.log($("#button_container").children(".on").index());
+                    var index = $("#button_container").children(".on").index();
+                    // console.log(index);
+                    // console.log($(".swiper-wrapper").children().eq(index).children(".innerNabe")[0]);
+                    var innerNabe = $(".swiper-wrapper").children().eq(index).children(".innerNabe");
+                    innerNabe.append(nabe);
+                    // $(".innerNabe").append(nabe);
+                    // nabe.show();
+                }
+
+                //可滑动切换
+                function forbideSlide() {
+                    swiper.allowTouchMove = false;
+                }
+                function ableSlide() {
+                    swiper.allowTouchMove = true;
+                }
+                // function alterSlide() {
+                //     swiper.allowTouchMove = !swiper.allowTouchMove;
+                // }
+                function alterClick() {
+                    // console.log(swiper.pagination.clickable);
+                    // swiper.pagination.clickable = !swiper.pagination.clickable;
+                }
+
+                // console.log($(".button_lis"));
+                //失效
+
+
+
+            </script>
+
+            <!-- <script src="js/anime.js"></script>
+                <script src="js/change.js"></script> -->
+            <!-- <script>
+    
+                    var icons = document.querySelector("#iconsUl").querySelectorAll("li");
+                    var viewwindow = document.querySelector(".viewwindow");
+    
+                    //console.log(viewwindow.children);
+                    // console.log(icons);
+                    for (var i = 0; i < viewwindow.children.length; i++) {
+                        viewwindow.children[i].setAttribute('index', i);
+                    }
+    
+                    var isMoving = false;
+    
+                    for (var i = 0; i < icons.length; i++) {
+                        icons[i].setAttribute('index', i);
+                        icons[i].addEventListener('touchstart', onIro);
+                    }
+    
+                    function onIro(e) {
+                        // console.log(e);
+                        if (isMoving) {
+    
+                        }
+                        else {
+                            isMoving = true;
+                            setTimeout(function () {
+                                isMoving = false;
+                            }, 700);
+                            for (var i = 0; i < icons.length; i++) {
+                                icons[i].className = 'out';
+                                icons[i].firstElementChild.className = '';
+                            }
+                            this.className = 'on';
+                            this.firstElementChild.className = 'imgChange';
+                            
+                            var inte = this.getAttribute('index');
+                            // viewwindow.children[inte].style.zIndex = '100';
+    
+                            // zzin(viewwindow.children[inte]);
+    
+    
+                            // anime(viewwindow.children[inte], function () {
+                            //     change(viewwindow.children[inte]);
+                            // });
+    
+    
+                        }
+                    }
+    
+    
+                </script> -->
+        </div>
+    </div>
+</body>
+<script>
+    if (document.documentElement.scrollHeight <= document.documentElement.clientHeight) {
+        bodyTag = document.getElementsByTagName('body')[0];
+        bodyTag.style.height = document.documentElement.clientWidth / screen.width * screen.height + 'px';
+    }
+    window.οnlοad = function () {
+        setTimeout(function () {
+            window.scrollTo(0, 1)
+        }, 0);
+    };
+
+</script>
+<script src="./js/handtips.js"></script>
+
+</html>
